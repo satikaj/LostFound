@@ -75,7 +75,7 @@ public class AdFragment extends Fragment {
         if (adverts != null) {
             binding.adName.setText((adverts.get(position).isLost() == true ? "Lost: " : "Found: ") + adverts.get(position).getName());
             binding.adDate.setText("Date: " + adverts.get(position).getDate());
-            binding.adLocation.setText("Location: " + adverts.get(position).getLocation());
+            binding.adLocation.setText("Location: " + adverts.get(position).getLocationName());
             binding.adPhone.setText("Contact: " + adverts.get(position).getPhone());
             binding.adDescription.setText("Details:\n\n" + adverts.get(position).getDescription());
         }

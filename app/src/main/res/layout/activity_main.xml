@@ -8,9 +8,11 @@
 
     <Button
         android:id="@+id/newAd"
-        android:layout_width="307dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="301dp"
+        android:layout_marginEnd="52dp"
         android:layout_marginBottom="7dp"
         android:text="CREATE A NEW ADVERT"
         app:layout_constraintBottom_toTopOf="@+id/showAll"
@@ -20,12 +22,27 @@
 
     <Button
         android:id="@+id/showAll"
-        android:layout_width="307dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="327dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="7dp"
         android:text="SHOW ALL LOST &amp; FOUND ITEMS"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/showMap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newAd" />
+
+    <Button
+        android:id="@+id/showMap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="271dp"
+        android:text="SHOW ON MAP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showAll" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + Util.PHONE + " INTEGER,"
                 + Util.DESCRIPTION + " TEXT,"
                 + Util.DATE + " TEXT,"
-                + Util.LOCATION + " TEXT,"
+                + Util.LOCATION_ID + " TEXT,"
+                + Util.LOCATION_NAME + " TEXT,"
                 + Util.IS_LOST + " INTEGER"
                 + ")";
 
@@ -47,7 +48,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(Util.PHONE, ad.getPhone());
         contentValues.put(Util.DESCRIPTION, ad.getDescription());
         contentValues.put(Util.DATE, ad.getDate());
-        contentValues.put(Util.LOCATION, ad.getLocation());
+        contentValues.put(Util.LOCATION_ID, ad.getLocationId());
+        contentValues.put(Util.LOCATION_NAME, ad.getLocationName());
         contentValues.put(Util.IS_LOST, ad.isLost());
 
         long rowId = db.insert(Util.TABLE_NAME, null, contentValues);
@@ -67,9 +69,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             @SuppressLint("Range") String phone = cursor.getString(cursor.getColumnIndex(Util.PHONE));
             @SuppressLint("Range") String description = cursor.getString(cursor.getColumnIndex(Util.DESCRIPTION));
             @SuppressLint("Range") String date = cursor.getString(cursor.getColumnIndex(Util.DATE));
-            @SuppressLint("Range") String location = cursor.getString(cursor.getColumnIndex(Util.LOCATION));
+            @SuppressLint("Range") String locationId = cursor.getString(cursor.getColumnIndex(Util.LOCATION_ID));
+            @SuppressLint("Range") String locationName = cursor.getString(cursor.getColumnIndex(Util.LOCATION_NAME));
             @SuppressLint("Range") int isLost = cursor.getInt(cursor.getColumnIndex(Util.IS_LOST));
-            Advert ad = new Advert(id, name, phone, description, date, location, isLost > 0);
+            Advert ad = new Advert(id, name, phone, description, date, locationId, locationName, isLost > 0);
             adverts.add(ad);
         }
 

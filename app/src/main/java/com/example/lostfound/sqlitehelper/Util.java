@@ -9,6 +9,7 @@ public class Util {
     public static final String PHONE = "phone";
     public static final String DESCRIPTION = "description";
     public static final String DATE = "date";
-    public static final String LOCATION = "location";
+    public static final String LOCATION_ID = "location_id";
+    public static final String LOCATION_NAME = "location_name";
     public static final String IS_LOST = "is_lost";
 }
